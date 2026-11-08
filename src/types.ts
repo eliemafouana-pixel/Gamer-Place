@@ -24,4 +24,15 @@ export type Activite = {
   placesMax: number;
   participants: string[]; // ids de profils
   organisateurId: string;
+  presences: Record<string, Presence>; // par id de profil
+  messages: Message[];
+};
+
+export type Presence = 'oui' | 'peut-etre' | 'non';
+
+export type Message = {
+  id: string;
+  auteurId: string;
+  texte: string;
+  date: string; // ISO
 };

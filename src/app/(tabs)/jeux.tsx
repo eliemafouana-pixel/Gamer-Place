@@ -1,19 +1,15 @@
 import { router } from 'expo-router';
 import { Pressable, ScrollView, Text, View } from 'react-native';
+import { BarreJetons } from '../../components/jeux';
 import { Carte, Texte, styles } from '../../components/ui';
 import { JEUX } from '../../data/catalogue';
-import { useEtat } from '../../store';
 import { couleurs } from '../../theme';
 
 export default function Jeux() {
-  const { jetons } = useEtat();
-
   return (
     <ScrollView style={styles.ecran} contentContainerStyle={styles.contenu}>
-      <Carte style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Texte doux>Mes jetons virtuels</Texte>
-        <Text style={{ color: couleurs.accent, fontSize: 22, fontWeight: '800' }}>🪙 {jetons}</Text>
-      </Carte>
+      <Texte doux style={{ marginBottom: 4 }}>Mes jetons virtuels</Texte>
+      <BarreJetons />
       {JEUX.map((j) => (
         <Pressable key={j.id} disabled={!j.disponible} onPress={() => router.push(`/jeux/${j.id}` as never)}>
           <Carte style={{ flexDirection: 'row', alignItems: 'center', opacity: j.disponible ? 1 : 0.55 }}>

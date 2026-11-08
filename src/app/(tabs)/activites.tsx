@@ -49,8 +49,9 @@ export default function Activites() {
             <Texte doux style={{ marginTop: 4 }}>📅 {formatDate(a.date)}</Texte>
             <Texte doux>📍 {a.lieu}, {a.quartier}</Texte>
             <Texte style={{ marginTop: 6 }}>
-              👥 {a.participants.length} / {a.placesMax} participants
+              👥 {a.participants.length} / {a.placesMax} participants · ✅ {a.participants.filter((p) => a.presences[p] === 'oui').length} confirmés
             </Texte>
+            <Bouton titre={`💬 Discussion et présences (${a.messages.length})`} secondaire onPress={() => router.push(`/activites/${a.id}`)} />
             {organisateur ? (
               <Texte doux style={{ marginTop: 8 }}>Tu organises cette activité.</Texte>
             ) : (

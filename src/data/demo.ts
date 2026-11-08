@@ -22,8 +22,8 @@ export function activitesDemo(ville: string, quartier: string): Activite[] {
     return d.toISOString();
   };
   return [
-    { id: 'a1', sport: 'football', titre: 'Foot à 5', lieu: 'City stade', ville, quartier, date: dans(1, 18), placesMax: 10, participants: ['d1', 'd5'], organisateurId: 'd1' },
-    { id: 'a2', sport: 'tennis', titre: 'Double amical', lieu: 'Courts municipaux', ville, quartier, date: dans(2, 10), placesMax: 4, participants: ['d2'], organisateurId: 'd2' },
-    { id: 'a3', sport: 'basket', titre: '3 contre 3', lieu: 'Playground du parc', ville, quartier: 'Centre-ville', date: dans(3, 17), placesMax: 6, participants: ['d3'], organisateurId: 'd3' },
+    { id: 'a1', sport: 'football', titre: 'Foot à 5', lieu: 'City stade', ville, quartier, date: dans(1, 18), placesMax: 10, participants: ['d1', 'd5'], organisateurId: 'd1', presences: { d1: 'oui', d5: 'peut-etre' }, messages: [{ id: 'm1', auteurId: 'd1', texte: "Salut tout le monde ! J'apporte le ballon.", date: new Date().toISOString() }] },
+    { id: 'a2', sport: 'tennis', titre: 'Double amical', lieu: 'Courts municipaux', ville, quartier, date: dans(2, 10), placesMax: 4, participants: ['d2'], organisateurId: 'd2', presences: { d2: 'oui' }, messages: [] },
+    { id: 'a3', sport: 'basket', titre: '3 contre 3', lieu: 'Playground du parc', ville, quartier: 'Centre-ville', date: dans(3, 17), placesMax: 6, participants: ['d3'], organisateurId: 'd3', presences: { d3: 'oui' }, messages: [] },
   ];
 }
