@@ -13,11 +13,11 @@ export type JeuEnLigne = {
 // agrément de l'ANJ.
 export const JEUX: JeuEnLigne[] = [
   { id: 'dames', nom: 'Dames', emoji: '⚫', disponible: true, description: 'Dames françaises 10×10, à deux sur le même téléphone.' },
-  { id: 'ludo', nom: 'Ludo', emoji: '🎲', disponible: false, description: 'De 2 à 4 joueurs.' },
-  { id: 'poker', nom: 'Poker', emoji: '🃏', disponible: false, description: "Texas Hold'em en jetons virtuels." },
-  { id: 'bingo', nom: 'Bingo', emoji: '🔢', disponible: false, description: 'Parties de quartier.' },
-  { id: 'roulette', nom: 'Roulette', emoji: '🎡', disponible: false, description: 'En jetons virtuels uniquement.' },
-  { id: 'machine', nom: 'Machine à sous', emoji: '🎰', disponible: false, description: 'En jetons virtuels uniquement.' },
+  { id: 'ludo', nom: 'Ludo', emoji: '🎲', disponible: true, description: 'Contre 3 adversaires. Le gagnant rafle la mise.' },
+  { id: 'poker', nom: 'Poker', emoji: '🃏', disponible: true, description: "Texas Hold'em contre 3 adversaires." },
+  { id: 'bingo', nom: 'Bingo', emoji: '🔢', disponible: true, description: 'Le premier à compléter une ligne gagne la cagnotte.' },
+  { id: 'roulette', nom: 'Roulette', emoji: '🎡', disponible: true, description: 'Roulette européenne : numéros, couleurs, douzaines.' },
+  { id: 'machine', nom: 'Machine à sous', emoji: '🎰', disponible: true, description: "Trois symboles identiques et c'est le jackpot." },
 ];
 
 export const SPORTS: { id: Sport; nom: string; emoji: string }[] = [

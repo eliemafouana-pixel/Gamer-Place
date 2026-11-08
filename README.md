@@ -4,21 +4,34 @@ Appli mobile (iOS, Android et web) pour rencontrer les gens de son quartier ou d
 
 ## Ce que contient cette première version
 
-- **Inscription** : pseudo, ville, quartier, jeux et sports préférés. 1000 jetons virtuels offerts.
+- **Accueil et inscription** : pseudo, ville, quartier, jeux et sports préférés. 1000 jetons virtuels offerts.
 - **Près de moi** : les joueurs du quartier ou de toute la ville, en ligne ou non.
-- **Jeux** : jeu de dames (règles françaises 10×10, à deux sur le même téléphone). Ludo, poker, bingo, roulette et machine à sous sont annoncés « bientôt ».
-- **Activités** : proposer ou rejoindre un match de foot, tennis, basket, volley, course ou pétanque.
+- **Jeux** (en jetons virtuels) :
+  - Dames (règles françaises 10×10, à deux sur le même téléphone)
+  - Ludo contre 3 adversaires
+  - Poker Texas Hold'em contre 3 adversaires
+  - Bingo à 75 boules
+  - Roulette européenne
+  - Machine à sous
+  - 500 jetons gratuits par jour quand le solde passe sous 100.
+- **Activités** : proposer ou rejoindre un match de foot, tennis, basket, volley, course ou pétanque. Chaque activité a sa discussion, la liste des participants et la confirmation de présence (je serai là, peut-être, je ne viens pas).
 - **Profil** : modifier son quartier et ses préférences.
 
 Les jeux se jouent uniquement en jetons virtuels. En France, le casino en ligne est interdit et seul le poker peut être proposé en argent réel, avec un agrément de l'ANJ.
 
-Pour l'instant, les données sont enregistrées sur le téléphone et les autres joueurs et activités sont des exemples. La prochaine étape est un serveur (comptes, géolocalisation, messagerie, parties en ligne entre joueurs).
+Pour l'instant, les données sont enregistrées sur le téléphone : les autres joueurs, les adversaires des jeux et les activités sont des exemples, et les messages ne sont visibles que sur l'appareil qui les écrit. La prochaine étape est un serveur (comptes, géolocalisation, messagerie partagée, parties en ligne entre vrais joueurs).
 
 ## Lancer l'appli
 
 ```bash
 npm install
 npx expo start
+```
+
+Si le téléphone n'est pas sur le même Wi-Fi, utiliser le tunnel ngrok :
+
+```bash
+npm run tunnel
 ```
 
 Scanner le QR code avec l'appli **Expo Go** sur le téléphone, ou appuyer sur `w` pour l'ouvrir dans le navigateur.

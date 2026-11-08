@@ -17,6 +17,12 @@ export default function RacineLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="inscription" options={{ headerShown: false }} />
         <Stack.Screen name="jeux/dames" options={{ title: 'Dames' }} />
+        <Stack.Screen name="jeux/ludo" options={{ title: 'Ludo' }} />
+        <Stack.Screen name="jeux/poker" options={{ title: 'Poker' }} />
+        <Stack.Screen name="jeux/bingo" options={{ title: 'Bingo' }} />
+        <Stack.Screen name="jeux/roulette" options={{ title: 'Roulette' }} />
+        <Stack.Screen name="jeux/machine" options={{ title: 'Machine à sous' }} />
+        <Stack.Screen name="activites/[id]" options={{ title: 'Discussion' }} />
         <Stack.Screen name="activites/nouvelle" options={{ title: 'Nouvelle activité', presentation: 'modal' }} />
       </Stack>
     </FournisseurEtat>
