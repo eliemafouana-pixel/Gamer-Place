@@ -28,6 +28,12 @@ npm install
 npx expo start
 ```
 
+Si le téléphone n'est pas sur le même Wi-Fi, utiliser le tunnel ngrok :
+
+```bash
+npm run tunnel
+```
+
 Scanner le QR code avec l'appli **Expo Go** sur le téléphone, ou appuyer sur `w` pour l'ouvrir dans le navigateur.
 
 ## Organisation du code
